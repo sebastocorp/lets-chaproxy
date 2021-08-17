@@ -1,0 +1,18 @@
+version: "3.5"
+
+services:
+    lets-chaproxy:
+        image: develolux/lets-chaproxy:latest
+        container_name: lets-chaproxy
+        restart: always
+        tty: true
+        stdin_open: true
+        environment:
+            EMAIL: "develolux@gmail.com"
+            ENVIRONMENT: "staging" # staging | production
+        volumes:
+            - ./letsencrypt/log:/var/log/letsencrypt
+            - ./letsencrypt:/etc/letsencrypt
+        ports:
+            - "80:80"
+            - "443:443"
