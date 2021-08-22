@@ -1,6 +1,6 @@
 # pragma once
 
-namespace Haproxy
+namespace HAPROXY
 {
 
     struct Service
@@ -15,5 +15,15 @@ namespace Haproxy
 }
 
 #ifdef SERVICE_IMPLEMENTATION
+
+namespace HAPROXY
+{
+    void Service::start() {}
+    void Service::stop() {}
+    void Service::restart() {}
+    bool Service::setCertbotConfig() { return true; }
+    bool Service::setRegularConfig() { return true; }
+    bool Service::changeMode( const char* mode ) { return true; }
+}
 
 #endif // SERVICE_IMPLEMENTATION

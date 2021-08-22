@@ -16,4 +16,15 @@ namespace FLOW
 
 #ifdef ACTION_IMPLEMENTATION
 
+namespace FLOW
+{
+    void Action::createCerts(){}
+    void Action::renewCerts(){}
+    void Action::watchLogs(){}
+
+    // Maybe not needed
+    void Action::logSucces(){}
+    void Action::logError(){}
+}
+
 #endif // ACTION_IMPLEMENTATION

@@ -3,6 +3,8 @@ CC=g++
 CFLAGS=-Wall -pedantic -std=c++2a -O3
 ARGS=
 
+.PHONY: run
+
 make:
 	$(CC) -o build/bin/lets $(CFLAGS) src/main.cpp
 
